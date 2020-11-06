@@ -1,5 +1,6 @@
 ''' 
-if else ke age try except dalne meh Addition() me error deh raha hai.
+Sir code toh erroe nehi hai par string value dene ke baad message se bahar nikal deh raha hai.
+Bas yehi problem hai matlab uske baad message phir se call nehi ho raha hai.kya karu?
 '''
 # again choice
 def again_choice():
@@ -16,10 +17,9 @@ def again_choice():
     Note: Remeber only enter numbers.(Exit:4)
     Enter 1 or 2 or 3 for any of calulation:    
     '''
-    option = int(input(message))
-    try:
+      
     # check choice if 1 then show hello
-        if option == 1:
+    if option == 1:
         # print('\nHello')
         addition()
     # check choice if 2 then show hi
@@ -32,11 +32,8 @@ def again_choice():
         multiplication()
     elif option == 4:
         print('\nExit')
-    except:
-        print('\nOnly int numbers.')    
     else:
-        print('\nYou enter wrong choice. Try again')
-        
+       print('\nYou enter wrong choice. Try again')
 
 # addition function
 def addition():
@@ -93,11 +90,13 @@ message = '''
 Note: Remeber only enter numbers.(Exit:4)
 Enter 1 or 2 or 3 for any of calulation:    
 '''
-option = int(input(message))
-
 try:
+        option = int(input(message))
+except:
+        print('\nOnly integer number.') 
+else:       
     # check choice if 1 then show hello
-        if option == 1:
+    if option == 1:
         # print('\nHello')
         addition()
     # check choice if 2 then show hi
@@ -110,7 +109,7 @@ try:
         multiplication()
     elif option == 4:
         print('\nExit')
-    except:
-        print('\nOnly int numbers.')    
     else:
-        print('\nYou enter wrong choice. Try again')
+       print('\nYou enter wrong choice. Try again')
+       
+    
